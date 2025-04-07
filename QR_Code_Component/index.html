@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<!-- displays site properly based on user's device -->
+
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="32x32"
+			href="./images/favicon-32x32.png"
+		/>
+
+		<title>Frontend Mentor | QR code component</title>
+
+		<!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+		<style>
+			@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
+			.attribution {
+				font-size: 11px;
+				text-align: center;
+			}
+			.attribution a {
+				color: hsl(228, 45%, 44%);
+			}
+
+			body {
+				background: hsl(212, 45%, 89%);
+				font-family: "Outfit";
+			}
+
+			* {
+				margin: 0;
+				padding: 0;
+				box-sizing: border-box;
+			}
+
+			.qr-card {
+				background: hsl(0, 0%, 100%);
+				border-radius: 20px;
+				padding: 1em 1em 40px 1em;
+				max-width: 320px;
+				text-align: center;
+				margin: auto;
+
+				& .qr {
+					width: 288px;
+					aspect-ratio: 1;
+					border-radius: 10px;
+					margin-block-end: 1.5em;
+				}
+
+				& div {
+					margin-inline: 1em;
+					display: flex;
+					flex-direction: column;
+					justify-content: center;
+					gap: 1em;
+				}
+
+				& h1 {
+					font-size: 22px;
+					line-height: 120%;
+					letter-spacing: 0px;
+					color: hsl(218, 44%, 22%);
+					font-weight: bold;
+				}
+
+				& p {
+					font-weight: 400;
+					font-size: 15px;
+					line-height: 140%;
+					letter-spacing: 0.2px;
+					color: hsl(216, 15%, 48%);
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<section class="qr-card">
+			<img class="qr" src="images/image-qr-code.png" />
+			<div>
+				<h1>Improve your front-end skills by building projects</h1>
+				<p>
+					Scan the QR code to visit Frontend Mentor and take your coding skills
+					to the next level
+				</p>
+			</div>
+		</section>
+
+		<div class="attribution">
+			Challenge by
+			<a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+				>Frontend Mentor</a
+			>. Coded by <a href="#">Kobe Werner</a>.
+		</div>
+	</body>
+</html>
