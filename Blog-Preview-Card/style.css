@@ -1,0 +1,129 @@
+@font-face {
+	font-family: 'Figtree';
+	src: url(assets/fonts/Figtree-VariableFont_wght.ttf) format('truetype');
+	font-weight: 400 700;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Figtree';
+	src: url(assets/fonts/Figtree-Italic-VariableFont_wght.ttf) format('truetype');
+	font-weight: 400 700;
+	font-style: italic;
+	font-display: swap;
+}
+
+:root {
+	--clr-accent: hsl(47, 88%, 63%);
+	--clr-neutral-100: hsl(0, 0%, 100%);
+	--clr-neutral-500: hsl(0, 0%, 42%);
+	--clr-neutral-950: hsl(0, 0%, 7%);
+
+	--fw-regular: 400;
+	--fw-bold: 700;
+	--fw-extra-bold: 900;
+
+	--fs-300: 0.875rem;
+	--fs-400: 1rem;
+	--fs-600: 1.5rem;
+
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+img {
+	max-width: 100%;
+	display: block;
+	padding: 0;
+	margin: 0;
+}
+
+
+
+body {
+	background: var(--clr-accent);
+	color: var(--clr-neutral-950);
+	font-family: 'Figtree', sans-serif;
+	font-weight: var(--fw-regular);
+	display: grid;
+	place-items: center;
+	justify-items: start;
+	min-height: 100vh;
+}
+
+main {
+	margin-inline: auto;
+}
+
+.card {
+	background: var(--clr-neutral-100);
+
+	width: 24rem;
+	padding: 1.5rem;
+
+	border-radius: 1.25rem;
+	border: 1px solid var(--clr-neutral-950);
+	box-shadow: var(--clr-neutral-950) 0.5rem 0.5rem;
+
+	display: flex;
+	flex-direction: column;
+	gap: 1.5rem;
+	
+	& > .header {
+		& img {
+			border-radius: 0.625rem;
+		}
+		
+	}
+
+	& > .body  {
+		display: flex;
+		flex-direction: column;
+		gap: 0.75rem;
+		align-items: flex-start;
+
+		& .badge {
+			background: var(--clr-accent);
+			padding: 0.25rem 0.75rem;
+			border-radius: 0.25rem;
+			font-weight: var(--fw-extra-bold);
+			font-size: var(--fs-300);
+			letter-spacing: 0px;
+			line-height: 1.5;
+		}
+
+		& h1 {
+			font-size: var(--fs-600);
+			font-weight: var(--fw-extra-bold);
+		}
+
+		& p {
+			font-size: var(--fs-400);
+			font-weight: var(--fw-regular);
+			color: var(--clr-neutral-500);
+			line-height: 1.5;
+		}
+	}
+
+	& > .footer {
+		display: flex;
+		align-items: center;
+		gap: 0.75rem;
+		
+		& img {
+			aspect-ratio: 1;
+			width: 2rem;
+		}
+
+		& span {
+			font-weight: var(--fw-extra-bold);
+			font-size: var(--fs-300);
+
+		}
+	}
+}
