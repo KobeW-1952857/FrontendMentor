@@ -1,21 +1,21 @@
 @font-face {
-	font-family: 'outfit';
-	src: url(assets/fonts/outfit/Outfit-VariableFont_wght.ttf) format('truetype');
+	font-family: "outfit";
+	src: url(assets/fonts/outfit/Outfit-VariableFont_wght.ttf) format("truetype");
 	font-weight: 100 900;
 	font-style: normal;
 	font-display: swap;
 }
 
 @font-face {
-	font-family: 'young-serif';
-	src: url(assets/fonts/young-serif/YoungSerif-Regular.ttf) format('truetype');
+	font-family: "young-serif";
+	src: url(assets/fonts/young-serif/YoungSerif-Regular.ttf) format("truetype");
 	font-style: normal;
 	font-weight: 400;
 	font-display: swap;
 }
 
 :root {
-	--clr-white: hsl(0,0%, 100%);
+	--clr-white: hsl(0, 0%, 100%);
 	--clr-Stone-100: hsl(30, 54%, 90%);
 	--clr-Stone-150: hsl(30, 18%, 87%);
 	--clr-Stone-600: hsl(30, 10%, 34%);
@@ -29,7 +29,6 @@
 	--fw-regular: 400;
 	--fw-semi-bold: 600;
 	--fw-bold: 700;
-
 
 	--fs-400: 1rem;
 	--fs-500: 1.25rem;
@@ -45,15 +44,20 @@ body {
 	background: var(--clr-Stone-100);
 	min-height: 100vh;
 	margin: 0 auto;
-	font-family: 'outfit', sans-serif;
+	font-family: "outfit", sans-serif;
 	color: var(--clr-Stone-600);
 	font-weight: var(--fw-regular);
 	font-size: var(--fs-400);
 	line-height: 1.5;
 }
 
-h1, h2, h3, h4, h5, h6 {
-	font-family: 'young-serif', serif;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: "young-serif", serif;
 	color: var(--clr-Brown-800);
 }
 
@@ -115,7 +119,8 @@ li > span {
 	font-weight: var(--fw-bold);
 }
 
-ul, ol {
+ul,
+ol {
 	padding-inline-start: 1.5rem;
 }
 
@@ -139,9 +144,9 @@ ol > li::marker {
 
 	h2 {
 		color: var(--clr-Rose-800);
-		font-family: 'outfit', sans-serif;
+		font-family: "outfit", sans-serif;
 		font-size: var(--fs-500);
-		font-weight: var(--fw-semi-bold)
+		font-weight: var(--fw-semi-bold);
 	}
 }
 
@@ -152,7 +157,7 @@ table {
 	tr + tr > td {
 		border-top: 1px solid var(--clr-Stone-150);
 	}
-	
+
 	td {
 		padding: 0.75rem 2rem;
 	}
