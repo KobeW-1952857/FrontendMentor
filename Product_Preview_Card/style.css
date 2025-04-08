@@ -129,3 +129,10 @@ body {
 		background-color: var(--clr-primary-700);
 	}
 }
+
+footer {
+	position: fixed;
+	bottom: 1em;
+	left: 0;
+	width: 100%;
+}
