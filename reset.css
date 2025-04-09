@@ -1,0 +1,89 @@
+/* Andy Bell's reset */
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[role="list"],
+ol[role="list"],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+	margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+	list-style: none;
+}
+
+/* Set core body defaults */
+body {
+	min-height: 100vh;
+	line-height: 1.5;
+}
+
+/* Improve text rendering */
+html:focus-within {
+	scroll-behavior: smooth;
+}
+
+/* Improve typography */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	text-rendering: optimizeLegibility;
+	line-height: 1.1;
+}
+
+/* Improve media defaults */
+img,
+picture,
+svg,
+video {
+	display: block;
+	max-width: 100%;
+	height: auto;
+}
+
+/* Improve form element defaults */
+input,
+button,
+textarea,
+select {
+	font: inherit;
+}
+
+/* Avoid text overflows */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	overflow-wrap: break-word;
+}
+
+/* Create a root stacking context */
+#root,
+#__next {
+	isolation: isolate;
+}

@@ -1,0 +1,129 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+:root {
+	--clr-neutral-000: hsl(0, 0%, 100%);
+	--clr-neutral-400: hsl(212, 6%, 44%);
+	--clr-neutral-500: hsl(234, 12%, 34%);
+
+	--clr-accent-red: hsl(0, 78%, 62%);
+	--clr-accent-cyan: hsl(180, 62%, 55%);
+	--clr-accent-orange: hsl(34, 97%, 64%);
+	--clr-accent-blue: hsl(212, 86%, 64%);
+
+	--fw-sm: 200;
+	--fw-reg: 400;
+	--fw-lg: 600;
+
+	--fs-400: 1rem;
+	--fs-600: 1.25rem;
+	--fs-800: 2.25rem;
+
+	--ff-base: "Poppins", sans-serif;
+}
+
+body {
+	min-height: 100vh;
+	font-family: var(--ff-base);
+	font-weight: var(--fw-reg);
+	font-size: var(--fs-400);
+	color: var(--clr-neutral-400);
+	background-color: var(--clr-neutral-000);
+	margin: 4rem;
+}
+
+header {
+	max-width: 450px;
+	margin-inline: auto;
+}
+
+main {
+	max-width: 1115px;
+	margin-inline: auto;
+}
+
+.intro {
+	margin-block-end: 3rem;
+	text-align: center;
+}
+
+.title {
+	font-weight: var(--fw-sm);
+	font-size: var(--fs-800);
+	line-height: 1.25;
+	margin-block-end: 1rem;
+
+	.emphasis {
+		font-weight: var(--fw-lg);
+		color: var(--clr-neutral-500);
+	}
+}
+
+.cards {
+	display: grid;
+	grid-auto-columns: 1fr;
+	gap: 2rem;
+
+	grid-template-areas:
+		"one"
+		"two"
+		"three"
+		"four";
+
+	@media (width > 700px) {
+		grid-template-areas:
+			"one two"
+			"three four";
+	}
+
+	@media (width > 1100px) {
+		grid-template-areas:
+			"... two   ...."
+			"one two   four"
+			"one three four"
+			"... three ....";
+	}
+
+	> :nth-child(1) {
+		--clr-accent: var(--clr-accent-cyan);
+		grid-area: one;
+	}
+
+	> :nth-child(2) {
+		--clr-accent: var(--clr-accent-red);
+		grid-area: two;
+	}
+	> :nth-child(3) {
+		--clr-accent: var(--clr-accent-orange);
+		grid-area: three;
+	}
+	> :nth-child(4) {
+		--clr-accent: var(--clr-accent-blue);
+		grid-area: four;
+	}
+}
+
+.card {
+	--br: 0.3rem;
+	border-block-start: var(--br) solid var(--clr-accent);
+	padding: 2rem;
+	border-radius: var(--br);
+	box-shadow: 0 0 1em 0.5em hsla(234, 12%, 34%, 0.1);
+
+	h2 {
+		font-weight: var(--fw-lg);
+		font-size: var(--fs-600);
+		color: var(--clr-neutral-500);
+		margin-block-end: 0.5rem;
+	}
+	img {
+		margin-block-start: 2rem;
+		float: inline-end;
+	}
+}
+
+footer {
+	position: fixed;
+	left: 0;
+	bottom: 1em;
+	width: 100%;
+}
